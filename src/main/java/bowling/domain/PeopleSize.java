@@ -11,4 +11,8 @@ public class PeopleSize {
         }
         this.size = size;
     }
+
+    public int size() {
+        return this.size;
+    }
 }
