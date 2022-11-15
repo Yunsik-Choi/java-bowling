@@ -2,6 +2,7 @@ package bowling.controller;
 
 import bowling.domain.BowlingGame;
 import bowling.domain.Name;
+import bowling.domain.PeopleSize;
 import bowling.domain.Scoreboard;
 import bowling.domain.score.Score;
 import bowling.view.Input;
@@ -10,6 +11,7 @@ import bowling.view.Output;
 public class BowlingController {
 
     public void start() {
+        PeopleSize peopleSize = new PeopleSize(Input.inputPeopleSize());
         Name name = new Name(Input.inputName());
         Scoreboard scoreboard = new Scoreboard(name);
         BowlingGame bowlingGame = new BowlingGame(scoreboard);
