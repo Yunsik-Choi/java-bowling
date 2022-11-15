@@ -69,7 +69,7 @@ public class Output {
     }
 
     private static String frameFormat(Frame frame) {
-        if (frame.totalScore().regularScores().isEmpty()) {
+        if (frame.totalScore().regularScores().isSizeEqual(0)) {
             return "";
         }
         if (frame.totalScore().regularScores().isSizeEqual(1)) {
