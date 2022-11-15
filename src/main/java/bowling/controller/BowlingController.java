@@ -14,6 +14,7 @@ public class BowlingController {
         Scoreboard scoreboard = new Scoreboard(name);
         BowlingGame bowlingGame = new BowlingGame(scoreboard);
         play(bowlingGame);
+        play(bowlingGame);
     }
 
     private void play(BowlingGame bowlingGame) {
