@@ -1,11 +1,18 @@
 package bowling.domain.score.scores;
 
 
+import bowling.domain.score.Score;
+
 public class LastFrameScores extends Scores {
     private static final int TOTAL_CHANCE = 3;
     private static final int DEFAULT_CHANCE = 2;
 
     @Override
+    public void add(Score score) {
+        this.scores.add(score);
+        validateScore();
+    }
+
     public void validateScore() {
         if (this.isSizeOver(TOTAL_CHANCE)) {
             throw new IllegalArgumentException();

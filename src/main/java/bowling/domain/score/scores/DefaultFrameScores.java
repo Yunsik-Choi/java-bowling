@@ -1,8 +1,15 @@
 package bowling.domain.score.scores;
 
+import bowling.domain.score.Score;
+
 public class DefaultFrameScores extends Scores {
 
     @Override
+    public void add(Score score) {
+        this.scores.add(score);
+        validateScore();
+    }
+
     public void validateScore() {
         if (this.sum() > SCORE_STRIKE) {
             throw new IllegalArgumentException();

@@ -32,7 +32,6 @@ public abstract class Frame {
             throw new IllegalArgumentException("남은 기회가 없습니다.");
         }
         this.totalScore.addRegularScore(score);
-        this.totalScore.validateScore();
         this.minusChance();
     }
 

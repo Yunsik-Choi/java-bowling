@@ -11,19 +11,15 @@ public abstract class Scores {
 
     protected final List<Score> scores;
 
-    public abstract void validateScore();
+    public Scores() {
+        this.scores = new ArrayList<>();
+    }
 
     public abstract boolean isNotEndScore(Scores scores);
 
     public abstract boolean isChanceMinusTwo();
 
-    public Scores() {
-        this.scores = new ArrayList<>();
-    }
-
-    public void add(Score score) {
-        this.scores.add(score);
-    }
+    public abstract void add(Score score);
 
     public boolean isEmpty() {
         return this.scores.isEmpty();
